@@ -1,0 +1,43 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-8">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title text-center">
+            Image and Paragraph Similarity Checker
+          </h3>
+          <form action="/submit" method="POST" enctype="multipart/form-data">
+            <div class="mb-3">
+              <label for="image" class="form-label">Upload an Image</label>
+              <input
+                type="file"
+                name="image"
+                class="form-control"
+                accept="image/*"
+                required
+              />
+            </div>
+            <div class="mb-3">
+              <label for="paragraph" class="form-label"
+                >Enter a Paragraph</label
+              >
+              <textarea
+                name="paragraph"
+                class="form-control"
+                rows="5"
+                required
+              ></textarea>
+            </div>
+            <div class="d-grid gap-2">
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>

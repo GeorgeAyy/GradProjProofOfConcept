@@ -1,0 +1,28 @@
+<%- include('partials/header') %>
+
+<div class="container mt-5">
+  <div class="row justify-content-center">
+    <div class="col-lg-10">
+      <div class="card shadow-sm">
+        <div class="card-body">
+          <h3 class="card-title text-center">Results</h3>
+
+          <h4>Generated Structured Output:</h4>
+          <pre><%= structuredOutput %></pre>
+
+          <h4>Generated System Scope:</h4>
+          <pre><%= systemScope %></pre>
+
+          <h4>Similarity Score:</h4>
+          <p class="lead"><%= similarity %></p>
+
+          <div class="d-grid gap-2">
+            <a href="/" class="btn btn-secondary">Check Another</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<%- include('partials/footer') %>
