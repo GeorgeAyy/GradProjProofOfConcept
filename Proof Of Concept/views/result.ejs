@@ -2,23 +2,19 @@
 
 <div class="container mt-5">
   <div class="row justify-content-center">
-    <div class="col-lg-10">
+    <div class="col-lg-8">
       <div class="card shadow-sm">
         <div class="card-body">
           <h3 class="card-title text-center">Results</h3>
-
-          <h4>Generated Structured Output:</h4>
+          <h5>Structured Output:</h5>
           <pre><%= structuredOutput %></pre>
-
-          <h4>Generated System Scope:</h4>
+          <h5>Generated System Scope:</h5>
           <pre><%= systemScope %></pre>
-
-          <h4>Similarity Score:</h4>
-          <p class="lead"><%= similarity %></p>
-
-          <div class="d-grid gap-2">
-            <a href="/" class="btn btn-secondary">Check Another</a>
-          </div>
+          <h5>Image Relationships:</h5>
+          <pre><%= imageRelationships %></pre>
+          <h5>Similarity Score:</h5>
+          <p><%= similarity %></p>
+          <a href="/" class="btn btn-primary">Go Back</a>
         </div>
       </div>
     </div>

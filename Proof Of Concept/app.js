@@ -39,16 +39,25 @@ app.post("/submit", upload.single("image"), async (req, res) => {
       paragraph,
     });
 
-    // Get structured output, system scope, and similarity from Flask backend
-    const { structuredOutput, systemScope, similarity } = response.data;
+    // Get structured output, system scope, image relationships, and similarity from Flask backend
+    const {
+      structuredOutput,
+      systemScope,
+      imageRelationships,
+      similarity,
+    } = response.data;
 
+    // Pass all the necessary data to the EJS template
     res.render("result", {
       structuredOutput,
       systemScope,
+      imageRelationships,
       similarity,
     });
   } catch (error) {
-    console.error("Error:", error);
+    console.error("Error:", error.message || error);
+
+    // Render the index page with an error message
     res.render("index", { error: "Something went wrong. Please try again." });
   }
 });
